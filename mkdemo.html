@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CanvasJS Example</title>
+</head>
+
+<body>
+    <img src="mk/arenas/back (1).jpeg" alt="" id="fundo">
+    <img src="mk/chars/player (1).gif" alt="" id="player">
+    <img src="mk/chars/kan.gif" alt="" id="kan">
+</body>
+
+<script>
+
+    const fundo = document.getElementById('fundo');
+    const player = document.getElementById('player');
+    const kan = document.getElementById('kan');
+
+    document.body.style.margin = '0px';
+    document.body.style.padding = '0px';
+
+
+    fundo.style.width = window.innerWidth + 'px';
+    fundo.style.height = window.innerHeight + 'px';
+    fundo.style.position = 'fixed';
+
+
+    player.style.position = 'fixed';
+    player.style.top = '40%';
+    player.style.width = '13%';
+    player.style.height = '50%';
+    player.style.left = '20%';
+
+
+    kan.style.position = 'fixed';
+    kan.style.top = '32%';
+    kan.style.width = '23%';
+    kan.style.right = '20%';
+    kan.style.height = '60%';
+
+
+    var indPlayer = Math.floor(Math.random() * 7);
+    var indfundo = Math.floor(Math.random() * 13);
+
+    if (indPlayer === 0)
+        indPlayer++
+
+    if (indfundo === 0)
+    indfundo++
+
+    player.src = "mk/chars/player (" + indPlayer + ").gif";
+    fundo.src = "mk/arenas/back (" + indfundo + ").jpeg";
+    //setInterval(() => {
+    //    player.src = "mk/chars/player (" + indPlayer + ").gif";
+    //    if (indPlayer !== 7)
+    //        indPlayer++
+    //    else
+    //        indPlayer = 1
+//
+    //    if (indPlayer === 7) {
+    //        fundo.src = "mk/arenas/back (" + indfundo + ").jpeg";
+    //        if (indfundo !== 13)
+    //            indfundo++
+    //        else
+    //            indfundo = 1
+    //    }
+//
+    //}, 100);
+
+</script>
+
+</html>
